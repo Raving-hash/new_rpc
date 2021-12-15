@@ -1,0 +1,4 @@
+# Project exclude paths
+/httpClient_rpc/httpClient_rpc_client/target/
+/httpClient_rpc/httpClient_rpc_pojo/target/
+/httpClient_rpc/httpClient_rpc_server/target/
