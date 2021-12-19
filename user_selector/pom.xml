@@ -2,19 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>new_rpc</artifactId>
+        <groupId>com.wy</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wy</groupId>
-    <artifactId>new_rpc</artifactId>
+    <artifactId>user_selector</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>httpClient_rpc</module>
-        <module>rmi_rpc</module>
-        <module>zk_java_client</module>
-        <module>rpc_wy_framework</module>
-        <module>my_rpc</module>
-        <module>user_selector</module>
+        <module>user_pojo</module>
+        <module>user_api</module>
+        <module>user_service</module>
+        <module>user_client</module>
     </modules>
 
     <properties>

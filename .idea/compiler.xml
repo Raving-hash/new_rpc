@@ -7,16 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="my_rpc_client" />
+        <module name="user_pojo" />
+        <module name="user_api" />
+        <module name="rpc_wy_framework" />
+        <module name="rmi_rpc_api" />
         <module name="rmi_rpc_client" />
         <module name="zk_java_client" />
-        <module name="my_rpc_client" />
+        <module name="user_service" />
+        <module name="user_client" />
         <module name="httpClient_rpc_client" />
         <module name="httpClient_rpc_pojo" />
-        <module name="rpc_wy_framework" />
         <module name="httpClient_rpc_server" />
         <module name="rmi_rpc_server" />
         <module name="my_rpc_server" />
-        <module name="rmi_rpc_api" />
         <module name="my_rpc_api" />
       </profile>
     </annotationProcessing>

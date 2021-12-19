@@ -35,7 +35,7 @@ public class WyRpcFactory {
             String serverIp = CONFIG.getProperty("registry.ip") == null?"localhost":CONFIG.getProperty("registry.ip");
             //获取服务端端口号
             int serverPort = CONFIG.getProperty("registry.port") == null? 9090 : Integer.parseInt(CONFIG.getProperty("registry.port"));
-            String zkServer = CONFIG.getProperty("zk.server") == null? "localhost:2181":CONFIG.getProperty("zk.server");
+            String zkServer = CONFIG.getProperty("zk.server") == null? "47.103.146.210:2181":CONFIG.getProperty("zk.server");
             int zkSessionTimeout = CONFIG.getProperty("zk.sessionTimeout") == null? 30000 : Integer.parseInt(CONFIG.getProperty("zk.sessionTimeout"));
             //创建一个zk连接对象
             CONNECTION = new ZkConnection(zkServer,zkSessionTimeout);
@@ -58,8 +58,8 @@ public class WyRpcFactory {
             }
             //初始化服务，并注册
             InputStream servicesStream = WyRpcFactory.class.getClassLoader().getResourceAsStream("wy-rpc-services.properties");
-            SERVICES.load(servicesStream);
-            if (!SERVICES.isEmpty()){
+            if (servicesStream != null){
+                SERVICES.load(servicesStream);
                 for (Object key:SERVICES.keySet()){
                     String value = SERVICES.getProperty(key.toString());
                     //获取接口对象和服务对象
